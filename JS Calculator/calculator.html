@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calculator.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <!-- <div id="wrap"> -->
+    <div id="side-bar" class="side-bar">
+      <div class="side-bar-text">
+        <h1>History</h1>
+        <div class="side-bar-flipped">
+          <br />
+          <button
+            class="lhs-btn2 lhs-hidden l0"
+            onclick="leftButtonClicked2(0)"
+          >
+            <b>&lt;</b>
+          </button>
+          <button
+            class="rhs-btn2 rhs-hidden r0"
+            onclick="rightButtonClicked2(0)"
+          >
+            <b>&gt;</b>
+          </button>
+          <h1
+            class="history2 c0"
+            style="
+              color: #747474;
+              font-size: 25px;
+              text-align: left;
+              overflow-x: scroll;
+              padding-bottom: 0;
+              margin-top: 0px;
+            "
+          >
+            There's no history yet
+          </h1>
+          <button class="lhs-btn lhs-hidden L0" onclick="leftButtonClicked(0)">
+            <b>&lt;</b>
+          </button>
+          <button class="rhs-btn rhs-hidden R0" onclick="rightButtonClicked(0)">
+            <b>&gt;</b>
+          </button>
+          <h1
+            class="history C0"
+            style="overflow-x: scroll; text-align: left; padding-bottom: 0px"
+          ></h1>
+          <br />
+          <br />
+        </div>
+        <span id="close-btn">
+          <a href="#" id="clo-btn"> &times;</a>
+        </span>
+      </div>
+      <div id="side-bar-background"></div>
+    </div>
+
+    <div id="container">
+      <div id="header">
+        <span id="name">
+          <h1>Calculator</h1>
+          <span id="history-btn">
+            <button class="his-btn">&equiv;</button>
+          </span>
+        </span>
+      </div>
+
+      <div id="buttons">
+        <div id="body">
+          <div id="txt-ara-2" onscroll="scrollDetector2()">
+            <button class="lft-btn2" id="lft-btn2"><b>&lt;</b></button>
+            <button class="rit-btn2" id="rit-btn2"><b>&gt;</b></button>
+            <h1 class="text-area-2" id="t-area2"></h1>
+          </div>
+          <div id="txt-ara" onscroll="scrollDetector()">
+            <button class="lft-btn" id="lft-btn"><b>&lt;</b></button>
+            <button class="rit-btn" id="rit-btn"><b>&gt;</b></button>
+            <h1 class="text-area" id="t-area"></h1>
+          </div>
+        </div>
+
+        <div id="first-row">
+          <button class="btn" id="clear">c</button>
+          <button class="btn" id="back-btn"><span>&#129046;</span></button>
+          <button class="btn" id="divid">
+            <span id="span-container">
+              <span> &div; </span>
+            </span>
+          </button>
+        </div>
+        <div id="second-row">
+          <button class="btn" id="seven">7</button>
+          <button class="btn" id="eight">8</button>
+          <button class="btn" id="nine">9</button>
+          <button class="btn" id="multi"><span>&times;</span></button>
+        </div>
+        <div id="third-row">
+          <button class="btn" id="four">4</button>
+          <button class="btn" id="five">5</button>
+          <button class="btn" id="six">6</button>
+          <button class="btn" id="minus"><span>&minus;</span></button>
+        </div>
+        <div id="forth-row">
+          <button class="btn" id="one">1</button>
+          <button class="btn" id="two">2</button>
+          <button class="btn" id="three">3</button>
+          <button class="btn" id="plus"><span>&plus;</span></button>
+        </div>
+        <div id="fifth-row">
+          <button class="btn" id="plus-minus">
+            <span>&minus;&sol;&plus;</span>
+          </button>
+          <button class="btn" id="zero">0</button>
+          <button class="btn" id="point">.</button>
+          <button class="btn" id="equal"><span>&equals;</span></button>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <script src="calculator.js"></script>
+  </body>
+</html>
